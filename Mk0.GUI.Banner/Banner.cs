@@ -76,6 +76,13 @@ namespace Mk0.GUI.Banner
                 {
                     timerAnzeigen.Interval = 250;
                 }
+                if (queue.bol.Count >50)
+                {
+                    for (int i = 0; i < 40; i++)
+                    {
+                        queue.bol.Dequeue();
+                    }
+                }
                 timerAnzeigen.Start();
             }
         }
